@@ -34,3 +34,8 @@ func NewServer (logger *log.Logger) *Server {
 		httpServer: httpServer,
 	}
 }
+
+func (s *Server) Start() error {
+	s.logger.Println("listening on", s.httpServer.Addr)
+	return s.httpServer.ListenAndServe()
+}
