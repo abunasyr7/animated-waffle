@@ -15,7 +15,7 @@ func isMorse(s string) bool {
 			continue
 		}
 
-		for _, r := token {
+		for _, r := range token {
 			if r != '.' && r != '-' {
 				return false
 			} 
